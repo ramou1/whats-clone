@@ -6,19 +6,19 @@
 
     <form [formGroup]="registerForm" (ngSubmit)="register()">
 
-      <ion-input fill="solid" label="Nome completo" formControlName="name" labelPlacement="floating" [clearInput]="true"
+      <ion-input label="Nome completo" formControlName="name" labelPlacement="floating" [clearInput]="true"
         placeholder="Digite o nome" errorText="Nome Inválido">
       </ion-input>
 
-      <ion-input fill="solid" label="Telefone" formControlName="phone" labelPlacement="floating" [clearInput]="true"
+      <ion-input label="Telefone" formControlName="phone" labelPlacement="floating" [clearInput]="true"
         placeholder="Digite o telefone" errorText="Telefone Inválido">
       </ion-input>
 
-      <ion-input fill="solid" label="Senha" labelPlacement="floating" formControlName="password"
+      <ion-input label="Senha" labelPlacement="floating" formControlName="password"
         placeholder="Digite a senha" errorText="Senha Inválida">
       </ion-input>
 
-      <ion-input fill="solid" label="Repetir Senha" labelPlacement="floating" formControlName="repeatPassword"
+      <ion-input label="Repetir Senha" labelPlacement="floating" formControlName="repeatPassword"
         placeholder="Repita a senha" errorText="Senha Inválida">
       </ion-input>
 

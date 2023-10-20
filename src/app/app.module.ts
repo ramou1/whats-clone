@@ -11,6 +11,7 @@ import { environment } from 'src/environments/environment';
 import { provideAuth, getAuth, initializeAuth, indexedDBLocalPersistence, browserPopupRedirectResolver } from '@angular/fire/auth';
 import { provideFirebaseApp } from '@angular/fire/app';
 import { initializeFirestore } from 'firebase/firestore';
+import { HTTP } from '@awesome-cordova-plugins/http/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -30,7 +31,7 @@ import { initializeFirestore } from 'firebase/firestore';
     }),
     provideAuth(() => getAuth()),
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, HTTP],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

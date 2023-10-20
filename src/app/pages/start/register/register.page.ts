@@ -3,6 +3,10 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NavController } from '@ionic/angular';
 import { APP_ROUTES } from 'src/app/constants/routes.const';
+import { AuthService } from 'src/app/services/auth.service';
+import { LoaderService } from 'src/app/services/loader.service';
+import { ToastService } from 'src/app/services/toast.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-register',
@@ -13,7 +17,7 @@ export class RegisterPage implements OnInit {
 
   registerForm!: FormGroup;
 
-  constructor(public fb: FormBuilder, public navCtrl: NavController, public router: Router) { }
+  constructor(public fb: FormBuilder, public navCtrl: NavController, public router: Router, private userSrvc: UserService, private loader: LoaderService, private authSrvc: AuthService, private toastSrvc: ToastService) { }
 
   ngOnInit() {
     this.createForm();
@@ -40,7 +44,22 @@ export class RegisterPage implements OnInit {
   }
 
   register() {
-    this.navCtrl.navigateRoot(APP_ROUTES.MAIN);
+    this.loader.presentLoader();
+    const formData = this.registerForm.value;
+
+    // this.authSrvc.registerUser(formData).then(async (res2) => {
+    //   const uid = await this.userSrvc.getUid();
+    //   this.userSrvc.addOrUpdateDocument({ id: uid, customerId: res?.id });
+
+    //   if (res2.error) {
+    //     console.log(res2);
+    //     // this.toastSrvc.presentToast(res2.message, true);
+    //     this.loader.hideLoader();
+    //   }
+    //   else {
+    //     this.navCtrl.navigateRoot(APP_ROUTES.MAIN);
+    //   }
+    // });
   }
 
 }

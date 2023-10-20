@@ -8,5 +8,6 @@ export const environment = {
     appId: "1:894932091017:web:c6488f48e94190b02cc658",
     measurementId: "G-4E1V0XNCSV"
   },
-  production: true
+  production: true,
+  apiUrl: "https://us-central1-whatsclone-61c8a.cloudfunctions.net",
 };
