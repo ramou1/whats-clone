@@ -1,3 +1,37 @@
+<ion-header>
+
+  <ion-toolbar>
+    <ion-title>WhatsApp</ion-title>
+    <ion-buttons slot="secondary">
+      <ion-button disabled="true">
+        <ion-icon slot="icon-only" name="camera-outline" color="light"></ion-icon>
+      </ion-button>
+      <ion-button disabled="true">
+        <ion-icon slot="icon-only" name="search" color="light"></ion-icon>
+      </ion-button>
+      <ion-button id="click-trigger">
+        <ion-icon slot="icon-only" name="ellipsis-vertical" color="light"></ion-icon>
+      </ion-button>
+      <ion-popover trigger="click-trigger" triggerAction="click">
+        <ng-template>
+          <ion-list>
+            <ion-item lines="none" (click)="openSettings()">Configurações</ion-item>
+            <ion-item lines="none" (click)="logout()">Sair</ion-item>
+          </ion-list>
+        </ng-template>
+      </ion-popover>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-segment value="chat">
+    <ion-segment-button value="chat">
+      <ion-label>Conversas</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="status">
+      <ion-label>Status</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+</ion-header>
+
 <ion-content class="ion-padding">
   <ion-list>
     <ion-item>Item 1</ion-item>
@@ -21,4 +55,10 @@
     <ion-item>Item 19</ion-item>
     <ion-item>Item 20</ion-item>
   </ion-list>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end" (click)="openContacts()">
+    <ion-fab-button>
+      <ion-icon name="chatbubble-ellipses"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>
