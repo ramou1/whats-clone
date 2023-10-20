@@ -5,6 +5,9 @@ export const APP_ROUTES = {
     MAIN: 'main',
     HOME: 'home',
     CHAT: 'chat',
+    SINGLE_CHAT: 'single-chat',
+    SETTINGS: 'settings',
+    CONTACTS: 'contacts',
     STATUS: 'status',
     CALLS: 'calls',
 }

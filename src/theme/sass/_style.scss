@@ -1,3 +1,27 @@
+ion-footer,
+ion-header {
+    background: #fff;
+    box-shadow: none !important;
+
+    &:after {
+        content: none !important;
+    }
+
+    ion-title {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--ion-color-dark);
+    }
+
+    ion-buttons+ion-title {
+        padding: 0;
+    }
+}
+
+* {
+    letter-spacing: 0 !important;
+}
+
 img.logo {
     max-width: 200px;
     margin: 0 auto;

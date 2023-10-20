@@ -1,0 +1,22 @@
+ion-title {
+    color: var(--ion-color-light);
+    font-weight: 400;
+}
+
+ion-popover {
+    ion-list {
+        ion-item {
+            font-size: 13px;
+        }
+    }
+}
+
+ion-header {
+    background: var(--ion-color-secondary);
+    --background: var(--ion-color-secondary);
+}
+
+ion-toolbar {
+    background: transparent;
+    --background: transparent;
+}

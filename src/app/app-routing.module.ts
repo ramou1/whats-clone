@@ -16,6 +16,10 @@ const routes: Routes = [
     redirectTo: 'start',
     pathMatch: 'full',
   },
+  {
+    path: 'single-chat',
+    loadChildren: () => import('./pages/main/single-chat/single-chat.module').then( m => m.SingleChatPageModule)
+  },
 ];
 @NgModule({
   imports: [
