@@ -11,9 +11,26 @@ import { SettingsPage } from '../settings/settings.page';
 })
 export class ChatPage implements OnInit {
 
+  public contacts: any;
+  public choosedSegment = 'chat';
   constructor(private modalCtrl: ModalController, private popoverCtrl: PopoverController, public navCtrl: NavController) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.getContacts();
+  }
+
+  getContacts() {
+    this.contacts = [
+      { name: 'John Doe', email: 'john@gmail.com', photo: "https://ionicframework.com/docs/img/demos/avatar.svg", notReadedMessages: 12 }, 
+      { name: 'Maria Clara', email: 'maria@gmail.com', photo: "https://ionicframework.com/docs/img/demos/avatar.svg", notReadedMessages: 2 },
+      { name: 'João da Silva', email: 'joao@gmail.com', photo: "https://ionicframework.com/docs/img/demos/avatar.svg", notReadedMessages: 0 },
+    ];
+  }
+
+  segmentChanged(event: any) {
+    console.log('Segment changed', event);
+    this.choosedSegment = event.detail.value;
+  }
 
   async openSettings() {
     this.popoverCtrl.dismiss();

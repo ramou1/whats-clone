@@ -1,0 +1,12 @@
+<ion-list>
+  <ion-item lines="none" *ngFor="let contact of contacts"> 
+    <ion-avatar>
+      <img [src]="contact.photo" />
+    </ion-avatar>
+    <ion-label>
+      <h4>{{contact.name}} </h4>
+      <p>{{contact.email}}</p>
+    </ion-label>
+    <ion-badge slot="end" *ngIf="type === 'chat' && contact.notReadedMessages != 0">{{contact.notReadedMessages}}</ion-badge>
+  </ion-item>
+</ion-list>

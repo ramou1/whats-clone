@@ -1,0 +1,21 @@
+ion-item {
+    --padding-start: 0;
+    margin: 10px 0;
+
+    ion-avatar {
+        // height: 30px;
+        // width: 30px;
+        margin-right: 10px;
+    }
+
+    ion-label {
+        p {
+            font-size: 12px;
+            font-weight: 600;
+        }
+    }
+}
+
+ion-item:first-of-type {
+    margin-top: 0;
+}
