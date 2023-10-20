@@ -1,0 +1,33 @@
+<ion-content class="ion-padding">
+  
+  <div class="start-container">
+    <img src="./assets/images/whatsapp-logo.png" class="logo">
+    <h2>Crie seu perfil</h2>
+
+    <form [formGroup]="registerForm" (ngSubmit)="register()">
+
+      <ion-input fill="solid" label="Nome completo" formControlName="name" labelPlacement="floating" [clearInput]="true"
+        placeholder="Digite o nome" errorText="Nome Inválido">
+      </ion-input>
+
+      <ion-input fill="solid" label="Telefone" formControlName="phone" labelPlacement="floating" [clearInput]="true"
+        placeholder="Digite o telefone" errorText="Telefone Inválido">
+      </ion-input>
+
+      <ion-input fill="solid" label="Senha" labelPlacement="floating" formControlName="password"
+        placeholder="Digite a senha" errorText="Senha Inválida">
+      </ion-input>
+
+      <ion-input fill="solid" label="Repetir Senha" labelPlacement="floating" formControlName="repeatPassword"
+        placeholder="Repita a senha" errorText="Senha Inválida">
+      </ion-input>
+
+      <ion-button type="submit" shape="round" [disabled]="registerForm.invalid" expand="block">Cadastre-se</ion-button>
+    </form>
+
+    <app-social-login type="register"></app-social-login>
+
+    <p class="choose-option">Já possui uma conta? <span (click)="openLogin()">Clique aqui</span></p>
+  </div>
+
+</ion-content>

@@ -1,0 +1,24 @@
+<ion-content class="ion-padding">
+
+  <div class="start-container">
+    <img src="./assets/images/whatsapp-logo.png" class="logo">
+    <h2>Faça seu login</h2>
+
+    <form [formGroup]="loginForm">
+
+      <ion-input label="Email" labelPlacement="floating" type="email" formControlName="email" placeholder="Digite aqui"
+        email></ion-input>
+
+      <ion-input label="Senha" labelPlacement="floating" type="password" formControlName="password"
+        placeholder="Digite aqui"></ion-input>
+
+      <ion-button expand="block" (click)="login()" [disabled]="loginForm.invalid">Logar</ion-button>
+
+    </form>
+
+    <app-social-login type="login"></app-social-login>
+
+    <p class="choose-option">Não possui uma conta? <span (click)="openRegister()">Clique aqui</span></p>
+  </div>
+
+</ion-content>

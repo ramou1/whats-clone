@@ -1,0 +1,23 @@
+.social-icons {
+    margin: 7vh auto;
+    display: table;
+
+    ion-button {
+        margin-top: 2vh !important;
+        margin: 0 7px;
+        height: 55px;
+        width: 55px;
+    }
+
+    .facebook {
+        --background: #1877f2;
+    }
+}
+
+.opcoes-cadastro {
+    margin-top: 3vh;
+    margin-bottom: 0;
+    font-weight: 500;
+    text-align: center;
+    color: var(--ion-color-medium);
+}
